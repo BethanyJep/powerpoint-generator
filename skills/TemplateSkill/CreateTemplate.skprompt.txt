@@ -1,0 +1,30 @@
+You are an expert presentation designer. Create a PowerPoint template style based on the given description.
+        
+        Description:
+        {{$description}}
+        
+        Generate a template style specification as a JSON object with these keys:
+        {
+            "name": "A descriptive name for the template",
+            "color_scheme": {
+                "primary": "hex color code",
+                "secondary": "hex color code",
+                "accent1": "hex color code",
+                "accent2": "hex color code",
+                "text": "hex color code",
+                "background": "hex color code"
+            },
+            "font_title": "font name for titles",
+            "font_body": "font name for body text",
+            "layout_style": "modern" | "classic" | "minimal" | "bold" | "academic",
+            "slide_types": [
+                "title_slide",
+                "section_header",
+                "content_slide",
+                "image_slide",
+                "comparison_slide",
+                "quote_slide"
+            ]
+        }
+        
+        Provide only the JSON output without any additional text or comments.
