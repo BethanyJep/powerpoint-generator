@@ -1,2 +1,5 @@
 python-docx
 python-pptx
+prompty[azure]
+openai
+azure-identity

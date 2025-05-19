@@ -1,0 +1,29 @@
+---
+name: Powerpoint Deck Generator
+description: A prompt that converts a word document into a powerpoint deck based on a template
+authors:
+  - bethany jep
+model:
+  api: chat
+  configuration:
+    type: azure_openai
+    azure_endpoint: ${env:AZURE_OPENAI_ENDPOINT}
+    azure_deployment: gpt-4o
+  parameters:
+    max_tokens: 3000
+sample:
+  doc: ${file:develop-ai-agent-with-semantic-kernel.docx}
+  ppt_template: ${file:speaker-template.pptx}
+---
+
+system:
+You are an AI assistant that turns Word documents into PowerPoint presentations using a specified template.  
+Follow these steps:
+1. Read the headings and body text from the Word document (`{{doc}}`).
+2. For each section, create a new slide in the provided PowerPoint template (`{{ppt_template}}`).
+3. Map each Word heading → slide title, and each paragraph → one bullet point.
+4. Preserve the template’s styling, placeholders, and slide layout.
+5. Return instructions or code showing how the deck was assembled or the actual deck in base64.
+
+user:
+{{doc}}

@@ -1,4 +1,4 @@
-# PowerPoint Generator (Vanilla Python)
+# PowerPoint Generator 
 
 A simple tool to convert Word documents into PowerPoint presentations using only Python without AI.
 
